@@ -1,0 +1,73 @@
+.form
+  border-radius 6px
+  border 1px solid rgba(24,28,33,.06)
+  bgc white
+  c #4a4a4a
+  pos relative
+  width 100%
+  max-width 520px
+  fs 16px
+  &__header
+    df(center, flex-start)
+    border-bottom 1px solid rgba(24,28,33,.06)
+    &-title
+      df(center, )
+      c #363636
+      font-weight 700
+      padding .75rem
+    &-icon
+      df(center, center)
+      size 1.5rem
+  &__content
+    padding 1.5rem
+  &__field:not(:last-child)
+    mb .75rem
+  &__label
+    c #363636
+    db()
+    fs 1rem
+    font-weight 700
+    &_error
+      c #ff3860
+    &:not(:last-child)
+      mb .5em
+  &__input
+    &:not(&_file)
+      size 100% 2.25em
+      font-size 1rem
+      padding calc(.375em - 1px) calc(.625em - 1px)
+      bgc #fff
+      border 1px solid #dbdbdb
+      border-radius 4px
+      c #363636
+      transition .4s border-color
+      &:not([readonly]):focus,
+      &:not([readonly]):active
+        border-color #3273dc
+    &_file
+      bgc #fff
+      border 1px solid #dbdbdb
+      border-radius 4px
+      c #363636
+      padding calc(.375em - 1px) calc(.625em - 1px)
+      cursor pointer
+  &__textarea
+    size 100% 8.25em
+    font-size 1rem
+    padding calc(.375em - 1px) calc(.625em - 1px)
+    bgc #fff
+    border 1px solid #dbdbdb
+    border-radius 4px
+    c #363636
+    transition .4s border-color
+    resize none
+    // oh()
+    &:focus,
+    &:active
+      border-color #3273dc
+  hr
+    margin 1.5rem -1.5rem
+    h 1px
+    border 0
+    db()
+    bgc #f5f5f5

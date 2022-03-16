@@ -1,0 +1,32 @@
+.dashboard
+  padding .75rem 1.5rem 3rem
+  &__info
+    border-radius 6px
+    border 1px solid rgba(24,28,33,.06)
+    w 100%
+    bgc white
+    df(center, space-between)
+    padding .75rem
+  &__item
+    df(flex-start, center)
+    flex-grow 1
+    &:not(:last-child)
+      mr .75rem
+  &__subtitle
+    c #7a7a7a
+    fontify 1.25rem 400 1.25
+  &__title
+    c #363636
+    fontify 2rem 600 1.125
+  &__icon
+    display inline-flex
+    align-items center
+    justify-content center
+    &.is-large
+      size 5rem
+    &_peoples
+      c #00d1b2
+    &_comments
+      c #23d160
+    &_warning
+      c #ff3860

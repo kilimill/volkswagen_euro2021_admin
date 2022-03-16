@@ -1,0 +1,61 @@
+.aside
+  pos fixed
+  l 0
+  t 0
+  h 100%
+  bgc #2e323a
+  dfv(stretch,)
+  w 15rem
+  @media $mobile
+    w 11rem
+  &__title
+    bgc #17191e
+    dfv(flex-start, center)
+    flex-grow 0
+    size 100% 4rem
+    padding 0 .75rem
+    c white
+    span
+      w 100%
+      white-space nowrap
+      text-overflow ellipsis
+      oh()
+  &__menu
+    flex-grow 0
+    flex-shrink 1
+    flex-basis auto
+    &-list
+      line-height 1.25
+      .icon
+        display inline-flex
+        align-items center
+        justify-content center
+        w 3rem
+    &-link
+      c #727c8f
+      db()
+      padding .5rem 0
+      transition .4s color, .4s background-color
+      &.router-link-exact-active
+        bgc #282c33
+        c white
+      &:not(.router-link-exact-active):hover
+        c #fff
+        bgc #262930
+      &_logout
+        bgc #209cee
+        c #fff
+        &:hover
+          bgc rgba(32,156,238,.9)
+    &-container
+      flex 1
+      pos relative
+      overflow auto
+    &-label
+      padding 0 .75rem
+      mt .75rem
+      mb .75rem
+      c #666f81
+      font-size .75em
+      letter-spacing .1em
+      text-transform uppercase

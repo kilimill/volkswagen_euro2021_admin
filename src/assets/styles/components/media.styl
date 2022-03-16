@@ -1,0 +1,92 @@
+.media
+  border-radius 6px
+  border 1px solid rgba(24,28,33,.06)
+  bgc white
+  c #4a4a4a
+  pos relative
+  width 100%
+  fs 16px
+  &__header
+    df(center, flex-start)
+    border-bottom 1px solid rgba(24,28,33,.06)
+    &-title
+      df(center, )
+      c #363636
+      font-weight 700
+      padding .75rem
+    &-icon
+      df(center, center)
+      size 1.5rem
+  &__item
+    padding 0 1.5rem
+    df()
+    mb 1.5rem
+    @media $mobile
+      flex-direction column
+  &__list
+    max-height 65vh
+    overflow auto
+    pt 1.5rem
+    &_player
+      max-height 517px
+  &__left
+    mr 1rem
+    flex 0 0 auto
+    &-avatar
+      db()
+      size 64px
+    &-img
+      size 100%
+      db()
+      border-radius 50%
+      object-fit cover
+  &__content
+    flex 1 1 auto
+  &__right
+    ml 1rem
+    flex 0 0 auto
+    @media $mobile
+      ml 0
+  &__meta
+    df()
+    mb .375rem
+    @media $mobile
+      flex-direction column
+    strong
+      color #363636
+      font-weight 700
+      mr .75rem
+    i
+      font-style italic
+    &-tag
+      display inline-flex
+      align-items center
+      justify-content center
+      fs .75rem
+      h 2em
+      line-height 1.5
+      padding 0 .75em
+      white-space nowrap
+      &_green
+        bgc #23d160
+        c #fff
+      &_blue
+        bgc #0428d8
+        c #fff
+      &_warning
+        bgc #ffdd57
+        c rgba(0,0,0,.7)
+  &__text
+    c #4a4a4a
+    fontify 1em 400 1.5
+  &__footer
+    border-top 1px solid #dbdbdb
+    df(center, center)
+    &-item
+      padding .75rem
+      df(center, center)
+      flex 1 0 0
+      c #3273dc
+      transition .4s color
+      &:hover
+        c #363636

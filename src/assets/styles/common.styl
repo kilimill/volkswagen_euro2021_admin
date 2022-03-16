@@ -1,0 +1,225 @@
+html
+  ff $os
+  bgc #f8f8f8
+  @media $mobile
+    fs vm(16)
+body
+  overflow -moz-scrollbars-none
+  -ms-overflow-style none
+  &::-webkit-scrollbar
+    w 0
+
+.fullheight
+  min-height 100vh
+  @media $mobile
+    padding 0 1rem
+
+.centered
+  df(center, center)
+
+.button
+  white-space nowrap
+  c #4a4a4a
+  border 1px solid #dbdbdb
+  padding calc(.375em - 1px) .75em
+  text-align center
+  border-radius 4px
+  transition .4s color, .4s background-color, .4s border-color
+  &:not([disabled]):hover
+    bgc #0a0a0a
+    border-color #0a0a0a
+    color white
+  &_black
+    bgc #0a0a0a
+    border-color #0a0a0a
+    color white
+  &_green
+    bgc #00d1b2
+    border-color transparent
+    c white
+    &:hover
+      bgc #00c4a7
+      border-color transparent
+      c white
+  &_blue
+    bgc #0428d8
+    border-color transparent
+    c white
+    &:hover
+      border-color transparent
+      c white
+  &_red
+    bgc #ff3860
+    border-color transparent
+    c white
+    &:hover
+      bgc #ff2b56
+      border-color transparent
+      c white
+  &_yellow
+    bgc #ffdd57
+    border-color transparent
+    c white
+    &:hover
+      bgc #f3cb2d
+      border-color transparent
+      c white
+  &_href
+    display inline-flex
+    cursor pointer
+  &[disabled]
+    box-shadow none
+    opacity .5
+  &__post
+    mr vw(30)
+  &.ml
+    ml vw(30)
+
+.status
+  font-weight bold
+  &_confirmed
+    c #00d1b2
+  &_new
+    c #ffdd57
+  &_rejected
+    c #0428d8
+
+.main
+  &.has-aside-left
+    pl 15rem
+    @media $mobile
+      pl 11rem
+
+.data
+  padding 1.5rem
+  &__content
+    &-empty
+      font-weight 700
+      padding 2rem
+
+.checkbox
+  display inline-flex
+  align-items center
+  pos relative
+  &__true
+    pos absolute
+    l 0
+    opacity 0
+    z-index -1
+    cursor pointer
+    size 100%
+  &__fake
+    cursor pointer
+    size 1.25em
+    flex-shrink 0
+    border-radius 4px
+    border 1px solid #2e323a
+    transition background .15s ease-out
+    background transparent
+  &__true:checked + &__fake
+    background #3273dc url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath d='M.04.627L.146.52.43.804.323.91zm.177.177L.854.167.96.273.323.91z' fill='%23fff'/%3E%3C/svg%3E") no-repeat 50%
+    background-size 75%
+    border-color #3273dc
+  &.checked > &__fake
+    background #3273dc url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath d='M.04.627L.146.52.43.804.323.91zm.177.177L.854.167.96.273.323.91z' fill='%23fff'/%3E%3C/svg%3E") no-repeat 50%
+    background-size 75%
+    border-color #3273dc
+
+.green
+  c #00d1b2
+.red
+  c #ff3860
+
+.input
+  w 100%
+  c #363636
+  border-radius 4px
+  bgc white
+  border 1px solid #dbdbdb
+
+.select
+  c #4a4a4a
+  border 1px solid #dbdbdb
+  border-radius 4px
+  padding calc(0.375em - 1px) calc(0.625em - 1px)
+  option[disabled]
+    dn()
+
+.link
+  c #167df0
+  transition .4s color
+  &:hover
+    c #0a0a0a
+
+.loader
+  db()
+  size 100%
+  background url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; background: none; display: block; shape-rendering: auto;' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cg%3E%3Ccircle cx='40.8083' cy='50' r='4' fill='%23209cee'%3E%3Canimate attributeName='cx' repeatCount='indefinite' dur='1s' values='95;35' keyTimes='0;1' begin='-0.67s'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' repeatCount='indefinite' dur='1s' values='0;1;1' keyTimes='0;0.2;1' begin='-0.67s'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='61.2083' cy='50' r='4' fill='%23209cee'%3E%3Canimate attributeName='cx' repeatCount='indefinite' dur='1s' values='95;35' keyTimes='0;1' begin='-0.33s'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' repeatCount='indefinite' dur='1s' values='0;1;1' keyTimes='0;0.2;1' begin='-0.33s'%3E%3C/animate%3E%3C/circle%3E%3Ccircle cx='81.0083' cy='50' r='4' fill='%23209cee'%3E%3Canimate attributeName='cx' repeatCount='indefinite' dur='1s' values='95;35' keyTimes='0;1' begin='0s'%3E%3C/animate%3E%3Canimate attributeName='fill-opacity' repeatCount='indefinite' dur='1s' values='0;1;1' keyTimes='0;0.2;1' begin='0s'%3E%3C/animate%3E%3C/circle%3E%3C/g%3E%3Cg transform='translate(-15 0)'%3E%3Cpath d='M50 50L20 50A30 30 0 0 0 80 50Z' fill='%2317191e' transform='rotate(90 50 50)'%3E%3C/path%3E%3Cpath d='M50 50L20 50A30 30 0 0 0 80 50Z' fill='%2317191e' transform='rotate(20.9876 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;45 50 50;0 50 50' keyTimes='0;0.5;1'%3E%3C/animateTransform%3E%3C/path%3E%3Cpath d='M50 50L20 50A30 30 0 0 1 80 50Z' fill='%2317191e' transform='rotate(-20.9876 50 50)'%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;-45 50 50;0 50 50' keyTimes='0;0.5;1'%3E%3C/animateTransform%3E%3C/path%3E%3C/g%3E%3C!-- %5Bldio%5D generated by https://loading.io/ --%3E%3C/svg%3E") no-repeat center
+  background-size auto 100%
+
+.input
+  width vw(200)
+  padding .5em .75em
+  border-radius 3px
+  border 1px solid #eee
+  transition .3s border-color
+  height vw(40)
+  background-color transparent
+  &:hover 
+    border: 1px solid #aaa
+
+.form__views
+  display flex
+  padding vw(20)
+  justify-content space-between
+  align-items center
+
+.btn--add
+  width vw(200)
+  text-align center
+  height vw(40)
+  background #1bbc9b
+  color #fff
+  font-size 1rem
+  font-weight 700
+  border-radius 3px
+  cursor pointer
+  transition: 0.4s background-color, opacity 0.4s
+
+  &:disabled
+    opacity 0.8
+    pointer-events none
+
+  &:hover
+    background-color #000
+
+.label-title
+  text-align center
+  font-weight 700
+  color #363636
+  display grid
+
+.form__views
+  display flex
+  padding vw(20) vw(20) 0 vw(20)
+  justify-content space-between
+
+.fans
+  .fans__header
+    display flex
+    justify-content space-between
+    align-items center
+
+  &__download-btn
+    padding 0 0.75rem
+
+  &__top
+    border-bottom vw(1) solid $black
+    padding-bottom vw(30)
+
+  &__bottom
+    display flex
+    justify-content space-between
+    align-items center
+    padding-top vw(30)
+

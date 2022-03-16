@@ -1,0 +1,18 @@
+.tiles
+  ml -.75rem
+  mr -.75rem
+  df()
+  flex-wrap wrap
+  @media $small
+    flex-direction column
+
+.tile
+  padding .75rem
+  flex 1 1 0
+  @media $small
+    width 100%
+    max-width 100%
+  .card
+    max-width 100%
+    & + .card
+      mt .75rem
